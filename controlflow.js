@@ -16,13 +16,19 @@ let start = 20 ;
 let area = 5 * 5 * PI; {
 console.log(area)
 }
-// 78.54 meters
+// 78.5 meters
 
-const plantAreaWeek1= space * start;
+const plantAreaWeek1= space * start; {
+    console.log(plantAreaWeek1)
+}
+// 16 meters for week 1
+
+const plantAreaWeek2 = plantAreaWeek1 * plantAreaWeek1; {
+    console.log(plantAreaWeek2)
+}
+
+const plantAreaWeek3 = plantAreaWeek2 * plantAreaWeek2; {
+    console.log(plantAreaWeek3)
+}
 
 
-
-// (20 * 2) ++1 for 4 loops
-
-
-// 98 total trees < total
