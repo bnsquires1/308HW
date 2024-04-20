@@ -1,11 +1,5 @@
 
 
-// Begin with the following task:
-
-// Declare a variable that stores the number of columns in each row of data within the CSV.
-
-// Instead of hard-coding four columns per row, expand your code to accept any number of columns. This should be calculated dynamically based on the first row of data.
-
 
 // previous hw pt. 3
 
@@ -22,40 +16,45 @@ let row = 1
 
 for (let i = 0; i < csvStr.length; i++) {
 
-    if (csvStr[i] === ',') {
-        cell++
-        continue
-    }
+	if (csvStr[i] === ',') {
+		cell++
+		continue
+	}
 
-    if (csvStr[i] === "\n") {
-        cell = 1
-        cell1 = "";
-        cell2 = "";
-        cell3 = "";
-        cell4 = "";
-        continue
-    }
+	if (csvStr[i] === "\n") {
+		cell = 1
+		cell1 = "";
+		cell2 = "";
+		cell3 = "";
+		cell4 = "";
+		continue
+	}
 
-    switch (cell) {
-        case 1:
-            cell1 += csvStr[i]
-            break
-        case 2:
-            cell2 += csvStr[i]
-            break
-        case 3:
-            cell3 += csvStr[i]
-            break
-        case 4:
-            cell4 += csvStr[i]
-            break
-    }
+	switch (cell) {
+		case 1:
+			cell1 += csvStr[i]
+			break
+		case 2:
+			cell2 += csvStr[i]
+			break
+		case 3:
+			cell3 += csvStr[i]
+			break
+		case 4:
+			cell4 += csvStr[i]
+			break
+	}
 
-    if (cell === 4 && csvStr[i + 1] === '\n' || i + 1 === csvStr.length) {
-        console.log(cell1, cell2, cell3, cell4);
-    }
+	if (cell === 4 && csvStr[i + 1] === '\n' || i + 1 === csvStr.length) {
+		console.log(cell1, cell2, cell3, cell4);
+	}
 
 }
+// Begin with the following task:
+
+// Declare a variable that stores the number of columns in each row of data within the CSV.
+
+// Instead of hard-coding four columns per row, expand your code to accept any number of columns. This should be calculated dynamically based on the first row of data.
 
 let columns = ["ID", "name", "occupation", "age"]
 console.log(columns)
@@ -63,11 +62,50 @@ console.log(columns)
 for (let i = 0; i < columns.length; i++) {
 	console.log(columns[i]);
 }
+let rows = csvStr.split("\n");
 
-["42", "Bruce", "Knight", "41"]
-["57", "Bob", "Fry Cook", "19"]
-["63", "Blaine", "Quiz Master", "58"]
-["98", "Bill", "Doctor's Assistant", "26"]
+
+console.log(rows) 
+
+let array = [rows]
+
+console.log(array)
+// console.log(csvArray)
+
+
+let headerRow = csvStr.substring(0,csvStr.indexOf("\n"));
+
+console.log(headerRow)
+
+// let numColumns = rows.split(headerRow).length
+
+// let numColumns = split.cs
+
+
+
+// 	let array = [];
+// 	let currentCell = "";
+
+// 	// function splitCsvRow(row) {
+// 	for (let i = 0; i < row.length; i++) {
+// 		if (row[i] === ',' && row[i - 1] !== '\n') {
+// 			array.push(currentCell);
+// 			currentCell = "";
+// 		} else if (row[i] !== `"`) {
+// 			currentCell += row[i];
+// 		}
+// 	}
+// // }
+// array.push(currentCell);
+
+
+
+// let csvArray = rows.map(row => split.rows)
+
+// ["42", "Bruce", "Knight", "41"]
+// ["57", "Bob", "Fry Cook", "19"]
+// ["63", "Blaine", "Quiz Master", "58"]
+// ["98", "Bill", "Doctor's Assistant", "26"]
 
 // = rows[i].split(',');
 
