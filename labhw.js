@@ -101,26 +101,4 @@ console.log(headerRow)
 
 	console.log(array2)
 
-// const result = parseCSV2(csvStr);
-// console.log(result);
 
-
-// let numColumns = rows.split(headerRow).length
-
-// let numColumns = split.cs
-
-
-
-// 	let array = [];
-// 	let currentCell = "";
-
-// 	// function splitCsvRow(row) {
-// 	for (let i = 0; i < row.length; i++) {
-// 		if (row[i] === ',' && row[i - 1] !== '\n') {
-// 			array.push(currentCell);
-// 			currentCell = "";
-// 		} else if (row[i] !== `"`) {
-// 			currentCell += row[i];
-// 		}
-// 	}
-// // \
