@@ -62,20 +62,48 @@ console.log(columns)
 for (let i = 0; i < columns.length; i++) {
 	console.log(columns[i]);
 }
+// After you have implemented the above:
+// Store your results in a two-dimensional array.
+// Each row should be its own array, with individual entries for each column.
+// Each row should be stored in a parent array, with the heading row located at index 0.
+// Cache this two-dimensional array in a variable for later use.
+
+
 let rows = csvStr.split("\n");
 
-
-console.log(rows) 
+console.log(rows)
 
 let array = [rows]
 
 console.log(array)
-// console.log(csvArray)
 
-
-let headerRow = csvStr.substring(0,csvStr.indexOf("\n"));
+let headerRow = csvStr.substring(0, csvStr.indexOf("\n"));
 
 console.log(headerRow)
+
+////////////
+
+	const newArrays = [];
+
+	for (let i = 1; i < rows.length; i++) {
+
+		const j = rows[i].split(",");
+
+		newArrays.push(j);
+	}
+
+	console.log(newArrays)
+
+	let array2 = [ 
+		[headerRow],
+		[newArrays]
+	];
+
+	console.log(array2)
+
+// const result = parseCSV2(csvStr);
+// console.log(result);
+
 
 // let numColumns = rows.split(headerRow).length
 
@@ -95,21 +123,4 @@ console.log(headerRow)
 // 			currentCell += row[i];
 // 		}
 // 	}
-// // }
-// array.push(currentCell);
-
-
-
-// let csvArray = rows.map(row => split.rows)
-
-// ["42", "Bruce", "Knight", "41"]
-// ["57", "Bob", "Fry Cook", "19"]
-// ["63", "Blaine", "Quiz Master", "58"]
-// ["98", "Bill", "Doctor's Assistant", "26"]
-
-// = rows[i].split(',');
-
-// for (let i = 1; i < row.length; i++) {
-
-// }
-// console.log( )
+// // \
